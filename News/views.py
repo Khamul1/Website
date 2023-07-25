@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView, CreateView
-from .utils import Mymixin
+from Django.utils import Mymixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import News, Category
@@ -31,7 +31,7 @@ class NewsByCategory(ListView, Mymixin):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = self.get_upper(Category.objects.get(pk=self.kwargs['category_id'])
+        context['title'] = self.get_upper(Category.objects.get(pk=self.kwargs['category_id']))
         return context
 
     def get_queryset(self):
