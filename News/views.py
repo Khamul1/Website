@@ -88,3 +88,5 @@ class ViewNews(DetailView):
 #     else:
 #         form = NewsForm()
 #     return render(request, 'News/add_news.html', {'form': form})
+
+# ЛА-ла
